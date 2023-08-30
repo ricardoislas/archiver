@@ -44,7 +44,7 @@ create_backup() {
         excluded_options+=("--exclude=$path")
     done
 
-    tar_command="tar czf \"$backup_path\" ${excluded_options[*]} -C \"$source_folder\" ."
+    tar_command="tar czvf \"$backup_path\" ${excluded_options[*]} -C \"$source_folder\" ."
     echo "Preview of the tar command:"
     echo "$tar_command"
 
